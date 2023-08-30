@@ -1,0 +1,91 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#apple,
+#sumsung {
+  width: 50%;
+  position: relative;
+  transition: 1s;
+}
+
+#apple {
+  background: url("imgs/apple.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#apple.full_width {
+  width: 90%;
+  transform: scale(1.2);
+}
+
+#apple.full_width #sumsung {
+  width: 10%;
+}
+
+#sumsung {
+  background: url("imgs/sum01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#sumsung.full_width {
+  width: 90%;
+  transform: scale(1.2);
+}
+
+#sumsung.full_width #apple {
+  width: 10%;
+}
+
+#apple h1,
+#sumsung h1 {
+  position: absolute;
+  top: 20%;
+  font-size: 50px;
+  background-color: #000;
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+}
+
+#apple button,
+#sumsung button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#apple button:hover,
+#sumsung button:hover {
+  opacity: 0.6;
+  border: 1px solid #fff;
+}
